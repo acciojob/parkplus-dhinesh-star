@@ -1,5 +1,7 @@
 package com.driver.model;
 
+import net.minidev.json.annotate.JsonIgnore;
+
 import javax.persistence.*;
 
 @Entity
@@ -14,6 +16,7 @@ public class Payment {
     private PaymentMode paymentMode;
 
     @JoinColumn
+    @JsonIgnore
     @OneToOne
     private Reservation reservation;
 
