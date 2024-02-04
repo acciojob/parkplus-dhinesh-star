@@ -47,7 +47,7 @@ public class ReservationServiceImpl implements ReservationService {
                 noOfWheels = numberOfWheels;
             }
 
-            if(numberOfWheels>=noOfWheels && spot.getOccupied()==false){
+            if(numberOfWheels>=noOfWheels){
                 if(spotToBeBooked==null){
                     spotToBeBooked=spot;
                 }
@@ -69,7 +69,7 @@ public class ReservationServiceImpl implements ReservationService {
         user.getReservationList().add(reservation);
 
         spotToBeBooked.getReservationList().add(reservation);
-        spotToBeBooked.setOccupied(true);
+//        spotToBeBooked.setOccupied(true);
 
         Reservation newReservationAdded = reservationRepository3.save(reservation);
 

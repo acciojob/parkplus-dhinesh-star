@@ -11,8 +11,10 @@ import java.util.List;
 public class Spot {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(nullable = false)
     private Integer id;
 
+    @Enumerated(value = EnumType.STRING)
     private SpotType spotType;
 
     private int pricePerHour;
