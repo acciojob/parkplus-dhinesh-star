@@ -9,8 +9,7 @@ import org.springframework.web.bind.annotation.*;
 @RestController
 @RequestMapping("/user")
 public class UserController {
-    @Autowired
-    UserServiceImpl userService;
+    UserServiceImpl userService = new UserServiceImpl();
     @PostMapping("/register")
     public ResponseEntity<Void> registerUser(@RequestParam String name, @RequestParam String phoneNumber, @RequestParam String password){
         userService.register(name, phoneNumber, password);
