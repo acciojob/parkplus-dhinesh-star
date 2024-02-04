@@ -56,4 +56,10 @@ public class Payment {
     public void setReservation(Reservation reservation) {
         this.reservation = reservation;
     }
+
+    public Boolean isPaymentCompleted(){
+        if(this.paymentCompleted==true)
+            return true;
+        return false;
+    }
 }
